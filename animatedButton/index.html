@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Food Startup</title>
+	<style>
+		body {
+			margin: 0;
+			padding: 0;
+			font-family: Arial, sans-serif;
+		}
+
+		header {
+			background-color: #222;
+			color: #fff;
+			padding: 20px;
+			text-align: center;
+			font-size: 24px;
+			font-weight: bold;
+			animation: slideDown 1s ease-in-out;
+		}
+
+		@keyframes slideDown {
+  			0% {
+   				transform: translateY(-100%);
+  			}
+  			100% {
+    			transform: translateY(0);
+  			}
+		}
+
+		.banner {
+			background-image: url('food.jpg');
+			background-size: cover;
+			height: 500px;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+			animation: fadeIn 1s ease-in-out;
+		}
+
+		@keyframes fadeIn {
+			0% {
+				opacity: 0;
+			}
+			100% {
+				opacity: 1;
+			}
+		}
+
+		.banner h1 {
+			color: #fff;
+			font-size: 48px;
+			margin-bottom: 0;
+			animation: slideInUp 1s ease-in-out;
+		}
+
+        .hero-img img{
+            width: 100%;
+            height: 100vh;
+            background-size: cover;
+
+        }
+
+		@keyframes slideInUp {
+			0% {
+				transform: translateY(100%);
+			}
+			100% {
+				transform: translateY(0);
+			}
+		}
+
+		.features {
+			display: flex;
+			flex-wrap: wrap;
+			padding: 50px;
+			background-color: #fff;
+			animation: growIn 1s ease-in-out;
+		}
+
+		@keyframes growIn {
+			0% {
+				opacity: 0;
+				transform: scale(0);
+			}
+			100% {
+				opacity: 1;
+				transform: scale(1);
+			}
+		}
+
+		.feature {
+			flex: 1;
+			margin: 10px;
+			padding: 20px;
+			background-color: #eee;
+			border-radius: 10px;
+			box-shadow: 0px 0px 10px rgba(0,0,0,0.2);
+			text-align: center;
+			animation: fadeIn 1s ease-in-out;
+		}
+
+		.feature img {
+			width: 100px;
+			height: 100px;
+			border-radius: 50%;
+			margin-bottom: 20px;
+			animation: rotateIn 1s ease-in-out;
+		}
+
+		@keyframes rotateIn {
+			0% {
+				transform: rotate(-360deg);
+			}
+			100% {
+				transform: rotate(0deg);
+			}
+		}
+
+		.feature h2 {
+			margin-top: 0;
+			font-size: 24px;
+			font-weight: bold;
+		}
+
+		.feature p {
+			margin-bottom: 0;
+			font-size: 18px;
+			line-height: 1.5;
+		}
+
+		.contact-form {
+			background-color: #f8f8f8;
+			padding: 50px;
+			text-align: center;
+			animation: slideUp 1s ease-in-out;
+		}
+
+		@keyframes slideUp {
+			0% {
+				transform: translateY(100%);
+			}
+			100% {
+				transform: translateY(0);
+			}
+		}
+
+		.contact-form h2 {
+			margin-top: 0;
+			font-size: 24px;
+			font-weight: bold;
+			margin-bottom: 20px;
+		}
+
+		.contact-form input[type="text"], .contact-form input[type="email"], .contact-form textarea {
+			display: block;
+			width: 100%;
+			padding: 10px;
+			margin-bottom: 20px;
+			border-radius: 5px;
+			border: none;
+		}
+
+		.contact-form button {
+			background-color: #222;
+			color: #fff;
+			padding: 10px 20px;
+			border: none;
+			border-radius: 5px;
+			cursor: pointer;
+			font-size: 18px;
+			font-weight: bold;
+			transition: all 0.3s ease-in-out;
+		}
+
+		.contact-form button:hover {
+			background-color: #fff;
+			color: #222;
+			border: 2px solid #222;
+		}
+
+	</style>
+</head>
+<body>
+
+	<header>
+		<h1>Food Startup</h1>
+		<p>Delicious and nutritious meals delivered straight to your door!</p>
+	</header>
+
+	<div class="banner">
+		<h1>Welcome to Our Food Startup</h1>
+	</div>
+    <div class="hero-img">
+        <img src="heroimg.png" alt="">
+    </div>
+	<div class="features">
+		<div class="feature">
+			<img src="chef.svg" alt="Chef">
+			<h2>Expert Chefs</h2>
+			<p>Our chefs are all highly trained and experienced, ensuring that every meal is delicious and nutritious.</p>
+		</div>
+		<div class="feature">
+			<img src="delivery.svg" alt="Delivery">
+			<h2>Free Delivery</h2>
+			<p>We offer free delivery on all our meals, so you can enjoy restaurant-quality food without leaving your home.</p>
+		</div>
+		<div class="feature">
+			<img src="ingredients.svg" alt="Ingredients">
+			<h2>Fresh Ingredients</h2>
+			<p>We source only the freshest ingredients for our meals, so you can be sure you're getting the best quality food possible.</p>
+		</div>
+	</div>
+
+	<div class="contact-form">
+		<h2>Get in Touch</h2>
+		<form>
+			<input type="text" placeholder="Name" required>
+			<input type="email" placeholder="Email" required>
+			<textarea placeholder="Message" rows="5" required></textarea>
+			<button type="submit">Send Message</button>
+		</form>
+	</div>
+
+</body>
+</html>

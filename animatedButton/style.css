@@ -1,0 +1,58 @@
+.animated-button {
+    width: 150px;
+    height: 50px;
+    padding: 10px 20px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #fff;
+    background-color: #4CAF50;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .animated-button span {
+    position: relative;
+    z-index: 1;
+  }
+  
+  .animated-button::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background-color: #fff;
+    opacity: 0.5;
+    transition: width 0.5s, height 0.5s;
+  }
+  
+  .animated-button:hover::before {
+    width: 300px;
+    height: 300px;
+  }
+  
+  .animated-button::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background-color: #fff;
+    opacity: 0.5;
+    transition: width 0.5s, height 0.5s, opacity 1s;
+  }
+  
+  .animated-button:hover::after {
+    width: 500px;
+    height: 500px;
+    opacity: 0;
+  }
